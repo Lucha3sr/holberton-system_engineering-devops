@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 #SSH client configuration
-Host 98.98.98.98
-     IdentityFile ~/.ssh/holberton
-     PasswordAuthentication no
-     user ubuntu
+IdentityFile ~/.ssh/holberton
+PasswordAuthentication no
