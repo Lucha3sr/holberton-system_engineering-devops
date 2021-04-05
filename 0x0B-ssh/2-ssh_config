@@ -2,5 +2,5 @@
 #SSH client configuration
 Host 98.98.98.98
      IdentityFile ~/.ssh/holberton
-     BatchMode yes
-     User ubuntu
+     PasswordAuthentication no
+     user ubuntu
