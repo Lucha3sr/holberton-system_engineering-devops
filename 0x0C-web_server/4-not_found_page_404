@@ -3,7 +3,7 @@
 sudo apt-get update
 sudo apt-get -y install nginx
 sudo service nginx start
-echo "Ceci n'est pas une page" > /usr/share/nginx/html/404.html
+echo "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html
 file="/etc/nginx/sites-available/default"
 sudo chmod +w $file
 cmd="error_page 404 /404.html;\nlocation = /404.html {\n/usr/share/nginx/html;\n}\n"
