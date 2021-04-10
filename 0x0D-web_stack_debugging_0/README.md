@@ -8,7 +8,7 @@ In this debugging series, broken/bugged webstacks will be given to you, the fina
 
 ### Tasks
 
-0. Give me a page!
+*0. Give me a page!*
 
 For this project you will be given a container which you can use to solve the task.
 Be sure to read the Docker concept page.
