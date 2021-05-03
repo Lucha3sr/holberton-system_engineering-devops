@@ -23,7 +23,7 @@ if __name__ == '__main__':
         TASK_COMPLETED_STATUS = key.get('completed')
         TASK_TITLE = key.get('title')
         # Writing data of CSV file
-        csv_writer.writerow([row(USER_ID), row(USERNAME),
-                             row(TASK_COMPLETED_STATUS),
-                             row(TASK_TITLE)])
+        csv_writer.writerow([int(argv[1]), r.get('username'),
+                             key.get('completed'),
+                             key.get('title')])
     data_file.close()
