@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Extend your Python script to export data in the CSV format"""
 import csv
+import json
 import requests
 from sys import argv
 
@@ -18,12 +19,11 @@ if __name__ == '__main__':
     # now we will open a file for writing
     data_file = open("{}.csv".format(argv[1]), 'w')
     # create the csv writer object
-    csv_writer = csv.writer(data_file)
+    csv_writer = csv.writer(data_file, quoting=csv.QUOTE_ALL)
     for key in t:
         TASK_COMPLETED_STATUS = key.get('completed')
         TASK_TITLE = key.get('title')
         # Writing data of CSV file
-        csv_writer.writerow([int(argv[1]), r.get('username'),
-                             key.get('completed'),
-                             key.get('title')])
+        csv_writer.writerow([USER_ID, USERNAME,
+                             TASK_COMPLETED_STATUS, TASK_TITLE])
     data_file.close()
