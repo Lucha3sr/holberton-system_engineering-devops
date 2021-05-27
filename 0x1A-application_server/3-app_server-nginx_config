@@ -54,9 +54,10 @@ server {
                  include proxy_params;
                  proxy_pass http://127.0.0.1:5000;
         }
-        location ~ /airbnb-dynamic/number_odd_or_even/(.*)$  {
+	location /airbnb-dynamic/ {
                  include proxy_params;
-                 proxy_pass ^http://127.0.0.1/number_odd_or_even/$1:5001;
+                 proxy_pass  http://127.0.0.1:5001/;
+        }
 
                 # First attempt to serve request as file, then
                 # as directory, then fall back to displaying a 404.
